@@ -84,7 +84,7 @@ To use lifter in your project, you'll only need the following instructions:
     User = lifter.models.Model('User')
     manager = User.load(users)
 
-Getting getting all active 26 years old users:
+Getting all active 26 years old users:
 
 .. code-block:: python
 
@@ -141,7 +141,7 @@ Getting minimum and average women age:
     minimum_woman_age = min(women_ages)
 
     # lifter
-    results = manager.filter(User.gender='female')\
+    results = manager.filter(User.gender == 'female')\
                      .aggregate((User.age, mean), (User.age, min))
 
 As you can see, lifter's version is shorter and more readable than vanilla Python.
